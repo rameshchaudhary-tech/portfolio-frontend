@@ -1,0 +1,179 @@
+/* Footer.css - Final Alignment Fix */
+
+.stark-footer {
+    background-color: #030712;
+    padding: 80px 5% 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+
+/* Futuristic Top Line */
+
+.footer-top-line {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+}
+
+
+/* Main Layout Grid */
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: start;
+}
+
+
+/* Navigation & Connect Links Alignment */
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 140px;
+}
+
+.group-title {
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    color: #4b5563;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.link-group a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: fit-content;
+}
+
+.link-group a:hover {
+    color: #3b82f6;
+    transform: translateX(8px);
+}
+
+
+/* Brand & Info Styling */
+
+.footer-logo {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0 0 15px;
+}
+
+.footer-logo .dot {
+    color: #3b82f6;
+}
+
+.system-status {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #2dd4bf;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.coordinates {
+    font-family: monospace;
+    color: #4b5563;
+    font-size: 0.8rem;
+    margin-top: 10px !important;
+    padding-bottom: 20px;
+}
+
+
+/* Download CV Button */
+
+.footer-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    /* thoda niche */
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(59, 130, 246, 0.05);
+    transition: all 0.3s ease;
+}
+
+.footer-resume-btn:hover {
+    background: #3b82f6;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
+}
+
+
+/* Bottom Bar */
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 0.75rem;
+}
+
+
+/* Mobile Fix */
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 60px;
+    }
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .link-group {
+        align-items: center;
+    }
+    .system-status {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

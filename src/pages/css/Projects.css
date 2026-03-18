@@ -1,0 +1,210 @@
+/* Projects.css */
+
+
+/* 1. Premium Google Fonts Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800;900&display=swap');
+.projects-page {
+    background-color: #050505;
+    /* Solid Deep Black */
+    min-height: 100vh;
+    padding: 100px 5%;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    /* Default clean font for reading */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* --- Header Section --- */
+
+.page-header {
+    margin-bottom: 80px;
+}
+
+.subtitle {
+    font-family: 'Fira Code', monospace;
+    /* Tech vibe for tags */
+    color: #3b82f6;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* Thoda space badhaya premium look ke liye */
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    /* Bold heading font */
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 900;
+    margin-top: 10px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.accent {
+    color: #4b5563;
+    /* Subtle grey-blue */
+}
+
+
+/* --- List Styling --- */
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #1e293b;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 150px;
+    padding: 50px 0;
+    border-bottom: 1px solid #1e293b;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smoother transition */
+    align-items: center;
+    /* Ensures everything stays perfectly centered vertically */
+}
+
+
+/* Hover Effect - Thoda subtle aur premium banaya hai */
+
+.project-item:hover {
+    background-color: rgba(59, 130, 246, 0.03);
+    /* Halka blue tint instead of white */
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Right se bhi padding di taaki balance rahe */
+    border-bottom-color: rgba(59, 130, 246, 0.4);
+    /* Border color change on hover */
+}
+
+
+/* --- Project Details --- */
+
+.project-number {
+    font-family: 'Fira Code', monospace;
+    color: #334155;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+
+.project-item:hover .project-number {
+    color: #3b82f6;
+    /* Number glows blue on hover */
+}
+
+.project-cat {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #3b82f6;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 500;
+}
+
+.project-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #f8fafc;
+}
+
+.project-desc {
+    font-family: 'Inter', sans-serif;
+    max-width: 650px;
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+
+/* --- Tags --- */
+
+.project-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-family: 'Fira Code', monospace;
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+.project-item:hover .tag {
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+
+/* --- Links --- */
+
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.view-link {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 2px solid #3b82f6;
+    /* Thodi thick border button feel ke liye */
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.view-link:hover {
+    color: #3b82f6;
+    letter-spacing: 1px;
+    border-bottom-color: transparent;
+    /* Hover pe underline gayab */
+}
+
+
+/* --- Mobile Adjustments --- */
+
+@media (max-width: 768px) {
+    .project-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 0;
+    }
+    .project-item:hover {
+        padding-left: 10px;
+        /* Mobile pe zyada slide na kare */
+        padding-right: 10px;
+    }
+    .project-link {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+    .project-number {
+        display: none;
+    }
+    .project-title {
+        font-size: 1.8rem;
+    }
+}

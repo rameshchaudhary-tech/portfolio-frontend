@@ -1,0 +1,272 @@
+/* HireMe.css */
+
+
+/* 1. Import Premium Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800;900&display=swap');
+.hire-me-container {
+    min-height: 100vh;
+    background-color: #030712;
+    /* Kept consistent with other pages */
+    color: #ffffff;
+    padding: 100px 5%;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    /* Aligns wrapper to center */
+}
+
+.content-wrapper {
+    max-width: 48rem;
+    /* 768px - Perfect width for reading */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    /* Proper spacing between sections */
+}
+
+
+/* --- Header Section --- */
+
+.header-section {
+    text-align: left;
+}
+
+.tagline {
+    font-family: 'Fira Code', monospace;
+    color: #3b82f6;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    background: linear-gradient(to right, #60a5fa, #2dd4bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: #94a3b8;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+
+/* --- Common Section Styles --- */
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    /* Border only goes as far as text */
+}
+
+
+/* --- Skills Section --- */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-pill {
+    font-family: 'Fira Code', monospace;
+    padding: 8px 18px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #2dd4bf;
+    transform: translateY(-2px);
+}
+
+
+/* --- Projects / Actions List --- */
+
+.action-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.action-item {
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.action-item:hover {
+    transform: translateX(5px);
+    /* Slight movement on hover */
+}
+
+.bullet-icon {
+    color: #2dd4bf;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    /* Keeps icon aligned with text */
+}
+
+.action-text {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* --- Call to Action Box --- */
+
+.cta-section {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    margin-top: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+}
+
+.cta-button span {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.5);
+}
+
+.cta-button:hover span {
+    transform: translateX(5px);
+    /* Arrow moves to the right */
+}
+
+
+/* --- Mobile Responsive Adjustments --- */
+
+
+/* --- ENHANCED MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 80px 15px;
+        /* Mobile par side padding thodi kam ki hai */
+    }
+    .contact-header h2 {
+        font-size: 2.2rem;
+    }
+    .contact-container {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 12px;
+    }
+    .contact-info {
+        flex: none;
+        /* Mobile par flex shrink/grow band karne ke liye */
+        width: 100%;
+        min-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+        padding: 2.5rem 1.5rem;
+        box-sizing: border-box;
+        /* Ensures padding doesn't break width */
+    }
+    .contact-form-wrapper {
+        flex: none;
+        width: 100%;
+        min-width: 100%;
+        padding: 2.5rem 1.5rem;
+        box-sizing: border-box;
+    }
+    /* YEH SABSE ZAROORI HAI: Lambe email ko break karke next line me bhejega */
+    .info-item {
+        font-size: 0.95rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    .social-links {
+        justify-content: center;
+        /* Mobile par buttons center me ache lagte hain */
+        margin-top: 2rem;
+    }
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Extra small phones (jaise iPhone SE) ke liye */
+
+@media (max-width: 400px) {
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 2rem 1rem;
+    }
+    .contact-header h2 {
+        font-size: 1.9rem;
+    }
+}

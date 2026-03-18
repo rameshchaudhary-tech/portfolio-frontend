@@ -1,0 +1,46 @@
+.projects-container {
+    min-height: 100vh;
+    background: #020617;
+    padding: 40px;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.projects-container h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Project Card */
+
+.project-card {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card h3 {
+    margin: 0;
+}
+
+
+/* Delete Button */
+
+.delete-btn {
+    background: #ef4444;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}

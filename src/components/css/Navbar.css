@@ -1,0 +1,176 @@
+/* GLOBAL RESET */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* NAVBAR MAIN CONTAINER */
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    /* Adjusted padding for better alignment with other pages */
+    background: rgba(3, 7, 18, 0.9);
+    /* Dark tech background with slight transparency */
+    backdrop-filter: blur(10px);
+    /* Glassmorphism effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #00e5ff;
+    order: 1;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+
+/* LINKS CONTAINER */
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0 auto;
+    padding: 0;
+    order: 2;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #94a3b8;
+    /* Muted gray for inactive links */
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+
+/* Hover Effect */
+
+.nav-menu a:hover {
+    color: #00e5ff;
+}
+
+
+/* --- ACTIVE LINK STATE --- */
+
+.nav-menu a.active {
+    color: #00e5ff;
+    font-weight: 600;
+}
+
+
+/* UNDERLINE ANIMATION (Hover & Active) */
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #00e5ff;
+    transition: width 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+    /* Line stays full when active or hovered */
+}
+
+
+/* BUTTON & HAMBURGER GROUP */
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    order: 3;
+}
+
+
+/* HIRE BUTTON */
+
+.hire-btn {
+    font-family: 'Inter', sans-serif;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 50px;
+    /* Pill shape */
+    background: #00e5ff;
+    color: #030712;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.2);
+}
+
+.hire-btn:hover {
+    background: #00c3d6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #f8fafc;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* --- MOBILE RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #0f172a;
+        /* Darker dropdown */
+        padding: 25px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 15px;
+        gap: 25px;
+        order: 4;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu a {
+        display: inline-block;
+        /* Helps center the underline animation */
+        font-size: 18px;
+    }
+}
