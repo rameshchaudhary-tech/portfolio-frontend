@@ -6,7 +6,7 @@ const About = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/about')
+       fetch('https://portfolio-backend-paud.onrender.com/api/about')
             .then(res => res.json())
             .then(data => {
                 setAbout(data);

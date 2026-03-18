@@ -7,7 +7,7 @@ const HireMe = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/hire")
+    fetch("https://portfolio-backend-paud.onrender.com/api/hire")
       .then(res => res.json())
       .then(data => {
         setHireData(data);

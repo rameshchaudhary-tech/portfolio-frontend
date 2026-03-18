@@ -7,7 +7,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/hero")
+    fetch("https://portfolio-backend-paud.onrender.com/api/hero")
       .then((res) => res.json())
       .then((data) => {
         // Handle API structure securely
